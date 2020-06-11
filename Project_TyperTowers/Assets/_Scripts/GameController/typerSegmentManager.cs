@@ -17,9 +17,9 @@ namespace TypingGameKit
         /// <Summary>
         /// Creates, and returns new text sequence
         /// </Summary>
-        public InputSequence createNewSequence(StringCollection newCollection, TowerSpawnNode anchor)
+        public InputSequence createNewSequence(StringCollection newCollection, Transform anchor)
         {
-            return sequenceManager.CreateSequence(sequenceManager.GetUniquelyTargetableString(newCollection), anchor.transform);
+            return sequenceManager.CreateSequence(sequenceManager.GetUniquelyTargetableString(newCollection), anchor);
         }
 
         #endregion

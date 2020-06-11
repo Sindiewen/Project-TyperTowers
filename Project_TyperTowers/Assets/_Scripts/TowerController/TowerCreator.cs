@@ -91,7 +91,7 @@ namespace TypingGameKit
         private void createSequence_Node(TowerSpawnNode anchor)
         {
             // InputSequence sequence = sequenceManager.CreateSequence(getNewSequnceText(nodeStringCollection), anchor.transform);
-            InputSequence sequence = typerSegmentManager.createNewSequence(nodeStringCollection, anchor);
+            InputSequence sequence = typerSegmentManager.createNewSequence(nodeStringCollection, anchor.transform);
             sequence.OnCompleted += delegate { 
                 anchor.TowerSpawnReady = false;
                 anchor.HasTowerSpawned = true;
