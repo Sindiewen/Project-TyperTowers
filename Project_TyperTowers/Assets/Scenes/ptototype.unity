@@ -164,6 +164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 491301875}
+  - component: {fileID: 491301876}
   m_Layer: 0
   m_Name: '---------- Towers ----------'
   m_TagString: Untagged
@@ -186,6 +187,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &491301876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491301874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab708f48324ead41b21e2b32c313242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerHolder: {fileID: 9435217}
+  towers:
+  - {fileID: 8189933506864134695, guid: 9b3bcdf8a12054840aebfa5c7e249126, type: 3}
+  towerSpawnIndex: 0
+  towerSpawnLocs: []
+  typerSegmentManager: {fileID: 1584470502}
+  nodeStringCollection: {fileID: 11400000, guid: e8c530c5751f8294eb9a580db75b114a,
+    type: 2}
+  spawnTowerMouseOverride: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,6 +372,49 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 621473420}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &648858619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 648858621}
+  - component: {fileID: 648858620}
+  m_Layer: 0
+  m_Name: '---------- Enemies ----------'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &648858620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648858619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2130da4df3d231c4b9e14ff1ce8e117a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &648858621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648858619}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.03234517, y: -1.1848335, z: -0.59765625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &715525740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -714,6 +779,18 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!114 &1584470502 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1584470502, guid: 1c7154a8185d83d48b692e64295773ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 3011911991591666459}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 359b91cac1cfb6147a8770d99d32cd9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1584470503 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1812533248237707669, guid: 1c7154a8185d83d48b692e64295773ff,
@@ -1021,6 +1098,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694177875}
     m_Modifications:
+    - target: {fileID: 1584470502, guid: 1c7154a8185d83d48b692e64295773ff, type: 3}
+      propertyPath: sequenceManager
+      value: 
+      objectReference: {fileID: 785386987}
     - target: {fileID: 1422848697673230031, guid: 1c7154a8185d83d48b692e64295773ff,
         type: 3}
       propertyPath: m_Name
@@ -1079,27 +1160,6 @@ PrefabInstance:
     - target: {fileID: 1812533248237707669, guid: 1c7154a8185d83d48b692e64295773ff,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3484491435233867877, guid: 1c7154a8185d83d48b692e64295773ff,
-        type: 3}
-      propertyPath: towerHolder
-      value: 
-      objectReference: {fileID: 9435217}
-    - target: {fileID: 3484491435233867877, guid: 1c7154a8185d83d48b692e64295773ff,
-        type: 3}
-      propertyPath: sequenceManager
-      value: 
-      objectReference: {fileID: 785386987}
-    - target: {fileID: 3484491435233867877, guid: 1c7154a8185d83d48b692e64295773ff,
-        type: 3}
-      propertyPath: nodeStringCollection
-      value: 
-      objectReference: {fileID: 11400000, guid: e8c530c5751f8294eb9a580db75b114a,
-        type: 2}
-    - target: {fileID: 3484491435233867877, guid: 1c7154a8185d83d48b692e64295773ff,
-        type: 3}
-      propertyPath: spawnTowerMouseOverride
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -24,7 +24,7 @@ namespace TypingGameKit
 
         [Space(10)]
         [Header("Typing Game Attributes")]
-        [SerializeField] private SequenceManager sequenceManager;
+        [SerializeField] private typerSegmentManager typerSegmentManager;
         [SerializeField] private StringCollection nodeStringCollection;
 
 
@@ -90,7 +90,8 @@ namespace TypingGameKit
         /// </Summary>
         private void createSequence_Node(TowerSpawnNode anchor)
         {
-            InputSequence sequence = sequenceManager.CreateSequence(getNewSequnceText(nodeStringCollection), anchor.transform);
+            // InputSequence sequence = sequenceManager.CreateSequence(getNewSequnceText(nodeStringCollection), anchor.transform);
+            InputSequence sequence = typerSegmentManager.createNewSequence(nodeStringCollection, anchor);
             sequence.OnCompleted += delegate { 
                 anchor.TowerSpawnReady = false;
                 anchor.HasTowerSpawned = true;
@@ -98,13 +99,13 @@ namespace TypingGameKit
             };
         }
 
-        /// <Summary>
-        /// Returns new string of text sequence by string collection passed in
-        /// </Summary>
-        private string getNewSequnceText(StringCollection collection)
-        {
-            return sequenceManager.GetUniquelyTargetableString(collection);
-        }
+        // /// <Summary>
+        // /// Returns new string of text sequence by string collection passed in
+        // /// </Summary>
+        // private string getNewSequnceText(StringCollection collection)
+        // {
+        //     return sequenceManager.GetUniquelyTargetableString(collection);
+        // }
 
         /// <Summary>
         /// Spawn a tower based on its spawn location passed in, and the current tower to spawn
