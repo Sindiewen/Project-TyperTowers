@@ -15,6 +15,8 @@ namespace TypingGameKit
         [SerializeField] private typerSegmentManager typerSegmentManager;
         [SerializeField] private StringCollection rusherStringCollection;
 
+        [SerializeField] private List<GameObject> enemySpawnLocs;
+
         #endregion
 
 
@@ -34,7 +36,7 @@ namespace TypingGameKit
         private void SpawnEnemy()
         {
             Debug.Log("Spawning enemy");
-            // Create enemy sequence
+            // instantiate enemy, then Create enemy sequence
         }
     }
 }
